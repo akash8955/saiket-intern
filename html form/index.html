@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="return validateForm()" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="79954d48-22fd-40a2-87da-80e45b8f8bbe">
+        <!-- Name Field -->
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+        </div>
+
+        <!-- Radio Buttons -->
+        <div class="form-group">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </div>
+
+        <!-- Checkboxes -->
+        <div class="form-group">
+            <label>Interests:</label>
+            <input type="checkbox" id="news" name="interests" value="news">
+            <label for="news">News</label>
+            <input type="checkbox" id="sports" name="interests" value="sports">
+            <label for="sports">Sports</label>
+            <input type="checkbox" id="tech" name="interests" value="tech">
+            <label for="tech">Technology</label>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select your country</option>
+                <option value="usa">United States</option>
+                <option value="canada">Canada</option>
+                <option value="uk">United Kingdom</option>
+                <option value="australia">Australia</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Message Field -->
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Enter Your Message" required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group1">
+            <button type="submit" class="main-btn">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name.trim() === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            if (email.trim() === "" || !email.includes('@')) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (message.trim() === "") {
+                alert("Please enter your message.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+</body>
+</html>

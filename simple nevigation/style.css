@@ -1,0 +1,78 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Navigation Menu Styles */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    min-height: 100vh;
+    border-bottom: 1px solid #ddd;
+}
+
+section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Home Section */
+#home {
+    background-color: #f4f4f4;
+}
+
+/* About Section */
+#about {
+    background-color: #e9ecef;
+}
+
+/* Services Section */
+#services {
+    background-color: #f8f9fa;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #e9ecef;
+}

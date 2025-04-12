@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Blogging Platform</h1>
+
+        <!-- Form to Create a New Blog Post -->
+        <form id="createPostForm">
+            <h2>Create a New Post</h2>
+            <input type="text" id="postTitle" placeholder="Post Title" required>
+            <textarea id="postContent" placeholder="Write your post here..." required></textarea>
+            <button type="submit">Publish Post</button>
+        </form>
+
+        <!-- Form to Edit a Blog Post (Hidden by Default) -->
+        <form id="editPostForm" class="hidden">
+            <h2>Edit Post</h2>
+            <input type="text" id="editPostTitle" placeholder="Post Title" required>
+            <textarea id="editPostContent" placeholder="Edit your post here..." required></textarea>
+            <button type="submit">Save Changes</button>
+            <button type="button" id="cancelEdit">Cancel</button>
+        </form>
+
+        <!-- Display All Blog Posts -->
+        <div id="postsContainer">
+            <h2>Published Posts</h2>
+            <div id="postsList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

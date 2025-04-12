@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form Styles */
+#taskForm {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#taskForm button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#taskForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Task List Styles */
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task-actions button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task-actions .complete-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.task-actions .complete-btn:hover {
+    background-color: #218838;
+}
+
+.task-actions .delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.task-actions .delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Task Item Styles */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Completed Task Styles */
+.task-item.completed {
+    text-decoration: line-through; /* Strikethrough effect */
+    opacity: 0.7; /* Reduce opacity */
+    background-color: #e9ecef; /* Light gray background */
+}
+
+.task-item.completed .complete-btn {
+    background-color: #6c757d; /* Gray color for completed button */
+}
+
+.task-item.completed .complete-btn:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+}
